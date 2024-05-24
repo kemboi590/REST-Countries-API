@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }</p>
           <p><strong>Top Level Domain:</strong> ${country.tld}</p>
           <p><strong>Currencies:</strong> ${currencies}</p>
-          <p><strong>Languages:</strong> ${languages}</p>
+          <p><strong>Languages:</strong> ${country.languages}</p>
+
         </div>
       `;
 
