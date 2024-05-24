@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       countryEl.classList.add("card");
 
       countryEl.innerHTML = `
-          <div>
+          <div class="flag-div">
               <img src="${country.flags.png}" alt="${country.name.common}" />
           </div>
           <div class="card-body">
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <img src="${country.flags.png}" alt="${country.name.common}" />
         </div>
         <div class="modal-info">
-          <h2>${country.name.common}</h2>
-          <p><strong>Native Name:</strong> ${country.name.official}</p>
+          <h2>${country.name}</h2>
+          <p><strong>Native Name:</strong> ${country.name}</p>
           <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
           <p><strong>Region:</strong> ${country.region}</p>
           <p><strong>Sub Region:</strong> ${country.subregion}</p>
