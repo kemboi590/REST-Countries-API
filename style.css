@@ -1,257 +1,281 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --bg: hsl(207, 26%, 17%);
-  --bg-elements: hsl(209, 23%, 22%);
-  --text: hsl(0, 0%, 100%);
-  --input: hsl(209, 23%, 22%);
-  --shadow: hsl(209, 23%, 22%);
-  --hover: hsl(209, 23%, 22%);
-  --hover-text: hsl(0, 0%, 100%);
-  --hover-shadow: hsl(209, 23%, 22%);
-  --selected: hsl(209, 23%, 22%);
-  --selected-text: hsl(0, 0%, 100%);
-  --selected-shadow: hsl(209, 23%, 22%);
-}
-
-body {
-  font-family: "Nunito Sans", sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--bg-elements);
-  transition: background-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  font-weight: 800;
-}
-
-header button {
-  background-color: var(--input);
-  color: var(--text);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 0 10px var(--shadow);
-  cursor: pointer;
-  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
-}
-
-header button:hover {
-  background-color: var(--hover);
-  color: var(--hover-text);
-  box-shadow: 0 0 10px var(--hover-shadow);
-}
-
-main {
-  padding: 2rem;
-}
-
-.search-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid var(--bg-elements);
-}
-
-main input {
-  background-color: var(--bg-elements);
-  color: var(--text);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  width: 60%;
-  outline: none;
-}
-
-main input::placeholder {
-  color: var(--text);
-}
-
-#region {
-  background-color: var(--bg-elements);
-  color: var(--text);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  width: 20%;
-  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
-}
-
-main select {
-  background-color: var(--bg-elements);
-  color: var(--text);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  width: 20%;
-  font-size: 0.7rem;
-}
-
-main select option {
-  background-color: var(--bg-elements);
-  color: var(--text);
-}
-
-#countries-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background-color: var(--bg-elements);
-  color: var(--text);
-  border-radius: 5px;
-  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
-  cursor: pointer;
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px 5px 0 0;
-}
-
-.card-body {
-  padding: 1rem;
-}
-
-.card-body p {
-  margin: 0.5rem 0;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background-color: var(--bg-elements);
-  color: var(--text);
-  border-radius: 5px;
-  box-shadow: 0 0 10px var(--shadow);
-  max-width: 600px;
-  padding: 2rem;
-}
-
-.modal-content img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.modal-content p {
-  margin: 1rem 0;
-}
-
-#close-modal {
-  background-color: var(--input);
-  color: var(--text);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
-
-#close-modal:hover {
-  background-color: var(--hover);
-  color: var(--hover-text);
-  box-shadow: 0 0 10px var(--hover-shadow);
-}
-
-/* media queries */
-/* at 730px */
-@media screen and (max-width: 730px) {
-  main {
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  main {
-    padding: 1rem;
+  
+  :root {
+    --bg-dark: hsl(207, 26%, 17%);
+    --bg-elements-dark: hsl(209, 23%, 22%);
+    --text-dark: hsl(0, 0%, 100%);
+    --input-dark: hsl(209, 23%, 22%);
+    --shadow-dark: hsl(209, 23%, 22%);
+    --hover-dark: hsl(209, 23%, 27%);
+    --hover-text-dark: hsl(0, 0%, 100%);
+    --hover-shadow-dark: hsl(209, 23%, 27%);
+  
+    --bg-light: hsl(0, 0%, 98%);
+    --bg-elements-light: hsl(0, 0%, 100%);
+    --text-light: hsl(200, 15%, 8%);
+    --input-light: hsl(0, 0%, 52%);
+    --shadow-light: hsl(0, 0%, 52%);
+    --hover-light: hsl(0, 0%, 93%);
+    --hover-text-light: hsl(200, 15%, 8%);
+    --hover-shadow-light: hsl(0, 0%, 93%);
+  
+    --bg: var(--bg-dark);
+    --bg-elements: var(--bg-elements-dark);
+    --text: var(--text-dark);
+    --input: var(--input-dark);
+    --shadow: var(--shadow-dark);
+    --hover: var(--hover-dark);
+    --hover-text: var(--hover-text-dark);
+    --hover-shadow: var(--hover-shadow-dark);
   }
-
-  .search-container {
-    flex-direction: column;
+  
+  body.light-mode {
+    --bg: var(--bg-light);
+    --bg-elements: var(--bg-elements-light);
+    --text: var(--text-light);
+    --input: var(--input-light);
+    --shadow: var(--shadow-light);
+    --hover: var(--hover-light);
+    --hover-text: var(--hover-text-light);
+    --hover-shadow: var(--hover-shadow-light);
   }
-
-  main input {
-    width: 100%;
-    margin-bottom: 1rem;
+  
+  body {
+    font-family: "Nunito Sans", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
-
-  #region {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  main select {
-    width: 100%;
-  }
-
-  #countries-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* media queries at 445 */
-@media screen and (max-width: 445px) {
-  main {
-    padding: 1rem;
-  }
-
+  
   header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-elements);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  
+  header button {
+    background-color: var(--input);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow);
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  header button:hover {
+    background-color: var(--hover);
+    color: var(--hover-text);
+    box-shadow: 0 0 10px var(--hover-shadow);
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--bg-elements);
+  }
+  
+  main input {
+    background-color: var(--bg-elements);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+    outline: none;
+  }
+  
+  main input::placeholder {
+    color: var(--text);
+  }
+  
+  #region {
+    background-color: var(--bg-elements);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  main select {
+    background-color: var(--bg-elements);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    font-size: 0.7rem;
+  }
+  
+  main select option {
+    background-color: var(--bg-elements);
+    color: var(--text);
+  }
+  
+  #countries-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: var(--bg-elements);
+    color: var(--text);
+    border-radius: 5px;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card-body {
     padding: 1rem;
   }
-
-  header h1 {
-    font-size: 1rem;
+  
+  .card-body p {
+    margin: 0.5rem 0;
   }
-
-  header button {
-    padding: 0.5rem 0.5rem;
-  }
-
-  .search-container {
-    flex-direction: column;
-  }
-
-  main input {
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: var(--bg-elements);
+    color: var(--text);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow);
+    max-width: 600px;
+    padding: 2rem;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .modal-content p {
+    margin: 1rem 0;
+  }
+  
+  #close-modal {
+    background-color: var(--input);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     margin-bottom: 1rem;
   }
-
-  #region {
-    width: 100%;
-    margin-bottom: 1rem;
+  
+  #close-modal:hover {
+    background-color: var(--hover);
+    color: var(--hover-text);
+    box-shadow: 0 0 10px var(--hover-shadow);
   }
-
-  main select {
-    width: 100%;
+  
+  /* media queries */
+  /* at 730px */
+  @media screen and (max-width: 730px) {
+    main {
+      padding: 1rem;
+    }
+  
+    .search-container {
+      flex-direction: column;
+    }
+  
+    main input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    #region {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    main select {
+      width: 100%;
+    }
+  
+    #countries-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-
-  #countries-container {
-    grid-template-columns: repeat(1, 1fr);
+  
+  /* media queries at 445 */
+  @media screen and (max-width: 445px) {
+    main {
+      padding: 1rem;
+    }
+  
+    header {
+      padding: 1rem;
+    }
+  
+    header h1 {
+      font-size: 1rem;
+    }
+  
+    header button {
+      padding: 0.5rem 0.5rem;
+    }
+  
+    .search-container {
+      flex-direction: column;
+    }
+  
+    main input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    #region {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    main select {
+      width: 100%;
+    }
+  
+    #countries-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
-}
+  
